@@ -1,0 +1,11 @@
+
+spring:
+  application:
+    name: eshop-customer-server  #服务名
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        file-extension: yaml

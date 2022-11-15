@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.MyorderMapper">
+
+    <insert id="saveOrder" parameterType="com.example.entity.Myorder" >
+        insert into myorder (order_id, order_num, cust_id,
+        pro_id, order_price, order_create_time,order_status
+        )
+        values (#{orderId}, #{orderNum}, #{custId},
+        #{proId}, #{orderPrice}, #{orderCreateTime}, #{orderStatus}
+        )
+    </insert>
+
+    <select id="getByOrdId" resultType="com.example.entity.Myorder">
+        select * from myorder where order_id =#{orderId}
+    </select>
+
+
+</mapper>
